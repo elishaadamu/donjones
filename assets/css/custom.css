@@ -122,3 +122,90 @@
   .row {
     margin-top: 50px !important;
   }
+  .custom-card {
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+.card-yellow {
+    background-color: #ffc107;
+    color: #000;
+}
+.card-green {
+    background-color: #28a745;
+}
+.btn-yellow {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+}
+.btn-yellow:hover {
+    background-color: #e0a800;
+}
+
+.bpad {
+	padding-bottom: 4px;
+}
+
+.card {
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+blockquote {
+	margin:60px;
+}
+blockquote > p {
+	font-family:"Crimson Text";
+	font-size:1.4em;
+}
+.blockquote-footer {
+	text-align:right;
+}
+
+a.btn {
+	margin-top:4px;
+}
+
+.main > h1 {
+	font-family:"Crimson Text";
+	font-size:3em;
+	text-align:center;
+}
+.main > h2 {
+	font-family:"Crimson Text";
+	font-size:2em;
+	text-align:center;
+	font-style:italic;
+}
+
+.bookdetail {
+	padding-left:20px;
+	padding-right:20px;
+}
+.bookblock {
+	margin-top:40px;
+}
+
+.praise {
+	font-family:"Crimson Text";
+	font-size:1.2em;
+	text-align:center;
+}
+.praisesource {
+	font-size:.8em;
+	text-align:center;
+}
+
+.booklink {
+	text-align:center;
+	padding:10px;
+}
+.booklink > img {
+	border-radius:10px;
+}
+
+.booklist > li {
+	margin-bottom:10px;
+}
