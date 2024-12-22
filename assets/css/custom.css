@@ -209,3 +209,30 @@ a.btn {
 .booklist > li {
 	margin-bottom:10px;
 }
+
+@media only screen and (max-width: 767px) {
+  .ban_img img {
+      min-height: 100px;
+      object-fit: contain;
+  }
+  .col{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .card-body {
+    flex: 1 1 auto;
+    padding: 0rem;
+}
+.col-sm-12{
+  padding: 0px;
+}
+.container{
+  margin: 0px;
+  padding: 0 0 0 0;
+}
+.card{
+  padding: 15px;
+}
+}
