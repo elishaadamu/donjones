@@ -1,9 +1,9 @@
 ---
-title: "Mundana Free Jekyll Theme"
+title: "DonJones.com | Award-Winning Fantasy and Sci-Fi"
 layout: default
 pagination:
     enabled: true
-description: "A great Jekyll theme developed by Sal @wowthemesnet."
+description: ""
 ---
 
 
@@ -15,7 +15,10 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
 <section class="ban_sec">
     <div class="container">
         <div class="ban_img">
-            <img src="{{site.baseurl}}/assets/images/home.webp" alt="banner" border="0">
+            <img src="/assets/images/home.webp" alt="banner" border="0">
+            <!-- <div class="ban_text">
+                <a href="#">Lend a hand</a>
+            </div> -->
         </div>
     </div>
 </section>
@@ -24,7 +27,7 @@ description: "A great Jekyll theme developed by Sal @wowthemesnet."
     
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
-{% if post.tags contains "sticky" %}
+{% if post.tags contains "intro" %}
 <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
     <div class="pl-4 pr-0 h-100 tofront">
         <div class="row justify-content-between">
