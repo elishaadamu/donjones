@@ -3,20 +3,22 @@ layout: default
 ---
 
 <style>
-
+    .jumbotron h1, h3{
+        font-family: "Crimson Text";
+    }
+    .jumbotron h1{
+        font-size: 3em;
+    }
+    .jumbotron  h3{
+        font-size: 2em;
+    }
 </style>
+
 {% assign author = site.authors[page.author] %}
 <div class="container">
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
-		<div class="h-100 tofront">
-			<div class="row {% if page.image %}  {% else %} justify-content-center {% endif %}">
-				<div class="{% if page.image %} col-md-12 {% else %} col-md-12 {% endif %} pr-0 pr-md-4 pt-4 pb-4 align-self-center">
-					
-					<h1 class="display-4 mb-4 text-center article-headline">{{ page.title }}</h1>
-					
-				</div>
-			</div>
-		</div>
+	<h1 class="text-center">{{page.title}}</h1>
+	<h3 class="text-center">{{page.subtitle}}</h3>
 	</div>
 </div>
 
