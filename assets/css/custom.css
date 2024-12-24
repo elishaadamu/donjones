@@ -1,3 +1,17 @@
+{% if page.subscription == "false" %}
+<style>
+.ml-embedded {
+    display: none !important;
+}
+
+{% else %}
+<style>
+.ml-embedded {
+    display: block !important;
+}
+
+{% endif %}
+
 .navbar-brand{
     font-family: Pacifico !important;
 }

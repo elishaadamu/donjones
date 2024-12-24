@@ -11,6 +11,7 @@ layout: default
     }
     .jumbotron  h3{
         font-size: 2em;
+        font-style: italic;
     }
 </style>
 
@@ -21,29 +22,125 @@ layout: default
 	<h3 class="text-center">{{page.subtitle}}</h3>
 	</div>
 </div>
-
-
-
-
-
 <div class="container-lg pt-4 pb-4">
 	<div class="row justify-content-center">
-        
-        
-       
-        
-        
-		<div class="col-md-12 col-lg-12">
-            
-            <!-- Article -->
-			<article class="article-post">                
-			{{ content }}                
-			</article>
+                
+		 <!-- Image Section -->
+         <div class="col-12 col-md-4 text-center mb-3 mb-md-0" style="padding-right: 100px;">
+            <img src="{{ site.baseurl }}/assets/images/{{ page.image }}" class="img-fluid" alt="Image" style="height: 400px;s">
+        </div>
+        <!-- Content Section -->
+        <div class="col-12 col-md-8">
+            <article>
+                {{ content }}
+            </article>
+        </div>
+        {% if page.awards %}
+        <!--- Awards --->
+		<div class="card">
+			<div class="card-header">Awards</em></div>
+			    <p>
+					<ul>
+                        {% for awards in page.awards %}
+						<li>{{awards}}</li>
+						{% endfor %}
+					</ul>
+				</p>
+			</div>
+        </div>
+        {% endif %}
+
+        {% if page.carousel %}
+        <!-- Card for Quotes -->
+        <div class="card" style="min-height: 300px;">
+            {% if page.carousel_title  %}
+                <div class="card-header">Praise for <i>{{ page.carousel_title }}</i></div>
+            {% endif %}
+            <div class="card-body">
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for carousel in page.carousel %}
+                        {% if carousel.quote_1 %}
+                            <div class="carousel-item {{ carousel.quote_1.period }}">
+                                <p class="praise">{{ carousel.quote_1.title }}</p>
+                                <p class="praisesource">
+                                    <a href="{{ carousel.quote_1.url_link }}" target="_blank" rel="noopener noreferrer">
+                                        {{ carousel.quote_1.url_title }}
+                                    </a>
+                                </p>
+                            </div>
+                        {% endif %}
+                        {% if carousel.quote_2 %}
+                            <div class="carousel-item {{ carousel.quote_2.period }}">
+                                <p class="praise">{{ carousel.quote_2.title }}</p>
+                                <p class="praisesource">
+                                    <a href="{{ carousel.quote_2.url_link }}" target="_blank" rel="noopener noreferrer">
+                                        {{ carousel.quote_2.url_title }}
+                                    </a>
+                                </p>
+                            </div>
+                        {% endif %}
+                        {% if carousel.quote_3 %}
+                            <div class="carousel-item {{ carousel.quote_3.period }}">
+                                <p class="praise">{{ carousel.quote_3.title }}</p>
+                                <p class="praisesource">
+                                    <a href="{{ carousel.quote_3.url_link }}" target="_blank" rel="noopener noreferrer">
+                                        {{ carousel.quote_3.url_title }}
+                                    </a>
+                                </p>
+                            </div>
+                        {% endif %}
+                        {% if carousel.quote_4 %}
+                            <div class="carousel-item {{ carousel.quote_4.period }}">
+                                <p class="praise">{{ carousel.quote_4.title }}</p>
+                                <p class="praisesource">
+                                    <a href="{{ carousel.quote_4.url_link }}" target="_blank" rel="noopener noreferrer">
+                                        {{ carousel.quote_4.url_title }}
+                                    </a>
+                                </p>
+                            </div>
+                        {% endif %}
+                        {% if carousel.quote_5 %}
+                            <div class="carousel-item {{ carousel.quote_5.period }}">
+                                <p class="praise">{{ carousel.quote_5.title }}</p>
+                                <p class="praisesource">
+                                    <a href="{{ carousel.quote_5.url_link }}" target="_blank" rel="noopener noreferrer">
+                                        {{ carousel.quote_5.url_title }}
+                                    </a>
+                                </p>
+                            </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <!--- Books --->
+			<div class="container" style="margin-top:60px;">
 			
-	
- 
-           {% include newsletters.html %}
-		</div>  
+				<div style="text-align:center;">
+                    <p>{{page.image_title}}</p>
+				</div>
+			
+				{% for items in page.images.grid_1 %}
+				<div class="row align-items-start booklink">
+					<div class="col-md-6 col-sm-12 booklink">
+						<img src="{{ site.baseurl }}/assets/images/{{ items.image_1.picture }}" style="width:200px;"/><br />
+						<a class="btn btn-primary" href="{{ items.image_1.link }}">{{ items.image_1.title }}</a>
+					</div>
+					<div class="col-md-6 col-sm-12 booklink">
+						<img src="{{ site.baseurl }}/assets/images/{{ items.image_2.picture }}" style="width:200px;"/><br />
+						<a class="btn btn-primary" href="{{ items.image_2.link }}">{{ items.image_2.link }}</a>
+					</div>
+                    <div class="col-md-6 col-sm-12 booklink">
+						<img src="{{ site.baseurl }}/assets/images/{{ items.image_3.picture }}" style="width:200px;"/><br />
+						<a class="btn btn-primary" href="{{ items.image_3.link }}">{{ items.image_3.link }}</a>
+					</div>
+				</div>
+                {% endfor %}
+			</div>
+
 	</div>
 </div>
 

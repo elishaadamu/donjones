@@ -11,5 +11,3 @@ However, before you go on, I'd like to invite you to join my author mailing list
 
 You can also get notifications directly from Amazon, Bookbub, and Goodreads, although I can't offer pre-release access via those.
 
-{% include newsletters.html %}
-

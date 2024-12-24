@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hit me up.
+subscription: false
 permalink: /hmu
 ---
 
